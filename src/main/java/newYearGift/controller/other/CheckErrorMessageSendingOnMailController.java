@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 public class CheckErrorMessageSendingOnMailController {
 
     @FXML
-    private Button sendTestErrorMessageButton;
-    @FXML
     private Label notificationLabel;
 
     private final Logger logger;

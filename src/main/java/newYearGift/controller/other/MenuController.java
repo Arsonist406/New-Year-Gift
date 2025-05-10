@@ -72,7 +72,9 @@ public class MenuController {
     private void switchScene(
             String path
     ) throws IOException {
+        // gets fxml file from the "resources" folder
         FXMLLoader loader = new FXMLLoader(NewYearGiftApplication.class.getResource(path));
+        // gets appropriate controller from context
         loader.setControllerFactory(context::getBean);
         Parent root = loader.load();
 

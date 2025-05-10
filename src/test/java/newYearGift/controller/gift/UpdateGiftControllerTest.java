@@ -671,8 +671,8 @@ class UpdateGiftControllerTest {
                 .thenReturn(gift);
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(giftService.updateGift(any(), any()))
-                .thenReturn(gift);
+        doNothing().when(giftService)
+                .updateGift(any(), any());
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
@@ -711,8 +711,9 @@ class UpdateGiftControllerTest {
         gift.setId(1L);
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(giftService.updateGift(any(), any()))
-                .thenThrow(new ConstraintViolationException("test", null));
+        doThrow(new ConstraintViolationException("test", null))
+                .when(giftService)
+                .updateGift(any(), any());
         doNothing().when(exceptionHandler)
                 .handleConstraintViolationException(any(), any());
 
@@ -753,8 +754,9 @@ class UpdateGiftControllerTest {
         gift.setId(1L);
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(giftService.updateGift(any(), any()))
-                .thenThrow(new BusinessException("test"));
+        doThrow(new BusinessException("test"))
+                .when(giftService)
+                .updateGift(any(), any());
         doNothing().when(exceptionHandler)
                 .handleBusinessException(any(), any());
 

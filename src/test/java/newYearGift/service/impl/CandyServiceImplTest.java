@@ -256,7 +256,7 @@ class CandyServiceImplTest {
     }
 
     @Test
-    void updateCandy_whenUpdatedInDB_returnCandy() {
+    void updateCandy_updatedInDB() {
         Long id = 1L;
         CandyDTO dto = new CandyDTO(
                 id,
@@ -288,14 +288,14 @@ class CandyServiceImplTest {
                 .thenReturn(candy);
 
 
-        Candy actual = candyServiceImpl.updateCandy(id, dto);
+        candyServiceImpl.updateCandy(id, dto);
 
 
-        assertEquals(candy, actual);
+        verify(candyRepository).save(any());
     }
 
     @Test
-    void deleteCandy_whenDeletedFromDB_returnTrue() {
+    void deleteCandy_deleteFromDB() {
         Long id = 1L;
         Candy candy = mock(Candy.class);
 

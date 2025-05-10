@@ -24,7 +24,9 @@ public class NewYearGiftApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        // gets fxml file from the "resources" folder
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/other/about.fxml"));
+        // gets appropriate controller from context
         loader.setControllerFactory(context::getBean);
         Parent root = loader.load();
 

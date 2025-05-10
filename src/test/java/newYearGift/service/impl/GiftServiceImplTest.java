@@ -199,10 +199,10 @@ class GiftServiceImplTest {
                 .thenReturn(gift);
 
 
-        Gift actual = giftServiceImpl.updateGift(id, dto);
+        giftServiceImpl.updateGift(id, dto);
 
 
-        assertEquals(gift, actual);
+        verify(giftRepository).save(any());
     }
 
     @Test

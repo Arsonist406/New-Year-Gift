@@ -131,7 +131,7 @@ public class CandyServiceImpl implements CandyService {
     }
 
     @Transactional
-    public Candy updateCandy(
+    public void updateCandy(
             Long id,
             CandyDTO dto
     ) {
@@ -193,7 +193,7 @@ public class CandyServiceImpl implements CandyService {
             candy.setCarbohydrates(newCarbohydrates);
         }
 
-        return candyRepository.save(candy);
+        candyRepository.save(candy);
     }
 
     @Transactional

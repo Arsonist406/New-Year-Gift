@@ -192,8 +192,8 @@ class UpdateCandyControllerTest {
                 BigDecimal.valueOf(15.0)));
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(candyService.updateCandy(eq(id), any()))
-                .thenReturn(candy);
+        doNothing().when(candyService)
+                .updateCandy(eq(id), any());
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
@@ -234,8 +234,8 @@ class UpdateCandyControllerTest {
                 BigDecimal.valueOf(15.0)));
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(candyService.updateCandy(any(), any()))
-                .thenThrow(ex);
+        doThrow(ex).when(candyService)
+                .updateCandy(any(), any());
         doNothing().when(exceptionHandler)
                 .handleConstraintViolationException(any(), any());
 
@@ -268,8 +268,8 @@ class UpdateCandyControllerTest {
                 BigDecimal.valueOf(15.0)));
         when(candyService.getCandyById(id))
                 .thenReturn(candy);
-        when(candyService.updateCandy(any(), any()))
-                .thenThrow(ex);
+        doThrow(ex).when(candyService)
+                .updateCandy(any(), any());
         doNothing().when(exceptionHandler)
                 .handleConstraintViolationException(any(), any());
 

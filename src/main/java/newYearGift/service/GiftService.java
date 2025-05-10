@@ -14,7 +14,7 @@ public interface GiftService {
 
     Gift createGift(@Valid GiftDTO dto);
 
-    Gift updateGift(Long id, @Valid GiftDTO dto);
+    void updateGift(Long id, @Valid GiftDTO dto);
 
     void deleteGift(Long id);
 

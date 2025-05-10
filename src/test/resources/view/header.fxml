@@ -25,6 +25,7 @@
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
                     <items>
                         <MenuItem fx:id="switchToAboutScene" mnemonicParsing="false" onAction="#switchToAboutScene" text="About" />
+                        <MenuItem fx:id="switchToCheckErrorMessageSendingOnMailScene" mnemonicParsing="false" onAction="#switchToCheckErrorMessageSendingOnMailScene" text="Check error message sending on mail" />
                     </items>
                 </Menu>
             </menus>

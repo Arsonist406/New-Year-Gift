@@ -82,7 +82,7 @@ public class GiftServiceImpl implements GiftService {
     }
 
     @Transactional
-    public Gift updateGift(
+    public void updateGift(
             Long id,
             GiftDTO dto
     ) {
@@ -122,7 +122,7 @@ public class GiftServiceImpl implements GiftService {
             gift.setCandyWeightMap(newCandyWeightMap);
         }
 
-        return giftRepository.save(gift);
+        giftRepository.save(gift);
     }
 
     private Map<Long, Integer> getIdsFromCandyWeightMap(

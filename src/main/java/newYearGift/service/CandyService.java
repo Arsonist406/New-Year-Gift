@@ -19,7 +19,7 @@ public interface CandyService {
 
     Candy createCandy(@Valid CandyDTO dto);
 
-    Candy updateCandy(Long id, @Valid CandyDTO dto);
+    void updateCandy(Long id, @Valid CandyDTO dto);
 
     void deleteCandy(Long id);
 }
