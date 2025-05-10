@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.candy.SearchCandiesController">
+   <top>
+       <fx:include source="../header.fxml" />
+   </top>
+   <center>
+      <TableView fx:id="candyTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+           <TableColumn fx:id="idColumn" prefWidth="30.0" text="Id" />
+           <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
+           <TableColumn fx:id="trademarkColumn" prefWidth="100.0" text="Trademark" />
+           <TableColumn fx:id="typeColumn" prefWidth="90.0" text="Type" />
+           <TableColumn fx:id="weightColumn" prefWidth="75.0" text="Weight" />
+           <TableColumn fx:id="caloriesColumn" prefWidth="75.0" text="Calories" />
+           <TableColumn fx:id="fatsColumn" prefWidth="55.0" text="Fats" />
+           <TableColumn fx:id="proteinsColumn" prefWidth="75.0" text="Proteins" />
+           <TableColumn fx:id="carbohydratesColumn" prefWidth="100.0" text="Carbohydrates" />
+           <TableColumn fx:id="sugarColumn" prefWidth="75.0" text="Sugar" />
+        </columns>
+      </TableView>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="140.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="64.0" prefWidth="159.0">
+                     <children>
+                        <Label text="ID">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+            
+                        <TextField fx:id="idField" maxWidth="60.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <Label text="Name">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <TextField fx:id="nameField">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+
+            <Label text="Trademark">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <TextField fx:id="trademarkField">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+
+            <Label text="Type">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <ChoiceBox fx:id="typeBox" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <VBox prefWidth="100.0">
+               <children>
+      
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="154.0" text="Sugar content">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+
+            <HBox prefHeight="43.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="43.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="63.0" text="Min">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+
+                        <TextField fx:id="minSugarContentField" promptText="0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox prefHeight="43.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="25.0" prefWidth="63.0" text="Max">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+
+                        <TextField fx:id="maxSugarContentField" promptText="100">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+
+            <Label layoutX="15.0" layoutY="125.0" text="Sort by">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <ChoiceBox fx:id="sortBox" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ChoiceBox>
+
+            <Label layoutX="15.0" layoutY="183.0" text="Order">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <ChoiceBox fx:id="orderBox" layoutX="15.0" layoutY="210.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ChoiceBox>
+
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <VBox alignment="CENTER" prefWidth="100.0">
+               <children>
+      
+                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchCandies" text="Search!">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="notificationLabel" alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="140.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#clearCriteriaFields" text="Clear all fields">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

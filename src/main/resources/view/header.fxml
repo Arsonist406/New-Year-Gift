@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.other.MenuController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Gift">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#switchToCreateGiftScene" text="Create" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToUsersGiftsScene" text="My gifts" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToUpdateGiftsScene" text="Update" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToDeleteGiftsScene" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Candy">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#switchToCreateCandyScene" text="Create" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToSearchCandyScene" text="Search" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToUpdateCandyScene" text="Update" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToDeleteCandyScene" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Other">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#switchToAboutScene" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToCheckErrorMessageSendingOnMailScene" text="Check error message sending on mail" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

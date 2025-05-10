@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.other.MenuController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="giftMenu" mnemonicParsing="false" text="Gift">
+                    <items>
+                        <MenuItem fx:id="switchToCreateGiftScene" mnemonicParsing="false" onAction="#switchToCreateGiftScene" text="Create" />
+                        <MenuItem fx:id="switchToSearchGiftsScene" mnemonicParsing="false" onAction="#switchToUsersGiftsScene" text="My gifts" />
+                        <MenuItem fx:id="switchToUpdateGiftScene" mnemonicParsing="false" onAction="#switchToUpdateGiftsScene" text="Update" />
+                        <MenuItem fx:id="switchToDeleteGiftScene" mnemonicParsing="false" onAction="#switchToDeleteGiftsScene" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu fx:id="candyMenu" mnemonicParsing="false" text="Candy">
+                    <items>
+                        <MenuItem fx:id="switchToCreateCandyScene" mnemonicParsing="false" onAction="#switchToCreateCandyScene" text="Create" />
+                        <MenuItem fx:id="switchToSearchCandiesScene" mnemonicParsing="false" onAction="#switchToSearchCandyScene" text="Search" />
+                        <MenuItem fx:id="switchToUpdateCandyScene" mnemonicParsing="false" onAction="#switchToUpdateCandyScene" text="Update" />
+                        <MenuItem fx:id="switchToDeleteCandyScene" mnemonicParsing="false" onAction="#switchToDeleteCandyScene" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="switchToAboutScene" mnemonicParsing="false" onAction="#switchToAboutScene" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

@@ -1,0 +1,177 @@
+
+.menu-bar {
+    -fx-font-size: 16px;
+}
+
+.menu-bar .menu {
+    -fx-padding: 8px 16px;
+}
+
+.menu-bar .menu-item {
+    -fx-padding: 8px 16px;
+}
+
+/* Base styles for the createCandy.fxml */
+.root {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Header menu styling */
+.menu-bar {
+    -fx-background-color: #4a6fa5;
+    -fx-text-fill: white;
+}
+
+.menu {
+    -fx-text-fill: white;
+}
+
+.menu-item {
+    -fx-background-color: #4a6fa5;
+    -fx-text-fill: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: #3a5a80;
+}
+
+/* Main content styling */
+.hbox {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e6f2ff);
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.vbox {
+    -fx-spacing: 10px;
+    -fx-padding: 15px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+}
+
+.separator:vertical {
+    -fx-padding: 0 10px;
+}
+
+/* Label styling */
+.label {
+    -fx-text-fill: #4a6fa5;
+    -fx-font-weight: bold;
+}
+
+/* Text field styling */
+.text-field {
+    /*-fx-background-color: #f8f8f8;*/
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-effect: innershadow(one-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 0);
+}
+
+.text-field:focused {
+    -fx-border-color: #4a6fa5;
+    -fx-effect: dropshadow(three-pass-box, rgba(74,111,165,0.2), 5, 0, 0, 0);
+}
+
+/* Choice box styling */
+.choice-box {
+    /*-fx-background-color: #f8f8f8;*/
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5px;
+}
+
+/* Slider styling */
+.slider {
+    -fx-control-inner-background: #e6f2ff;
+}
+
+.slider .thumb {
+    -fx-background-color: #4a6fa5;
+}
+
+.slider .track {
+    -fx-background-color: #d1d1d1;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #4a6fa5;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #3a5a80;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #2a4a70;
+}
+
+/* Notification label styling */
+#findNotificationLabel,
+#deleteNotificationLabel,
+#updateNotificationLabel,
+#deleteCandyNotificationLabel,
+#findGiftNotificationLabel,
+#findCandyNotificationLabel,
+#addCandyNotificationLabel,
+#updateGiftNotificationLabel,
+#notificationLabel {
+    -fx-text-fill: #d9534f;
+    -fx-font-style: italic;
+}
+
+/* Add some animation for interactive elements */
+.text-field, .choice-box, .slider, .button {
+    -fx-transition: all 0.3s ease;
+}
+
+/* Header menu styling - updated white version */
+.menu-bar {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 2px 0 2px 0;
+}
+
+.menu {
+    -fx-text-fill: #333333;
+    -fx-padding: 5px 15px;
+}
+
+.menu:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.menu:showing {
+    -fx-background-color: #e0e0e0;
+}
+
+.menu-item {
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px 20px;
+}
+
+.menu-item:hover {
+    -fx-background-color: #4a6fa5;
+    -fx-text-fill: white;
+}
+
+.menu-item .label {
+    -fx-text-fill: inherit;
+}
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 5px 0;
+}

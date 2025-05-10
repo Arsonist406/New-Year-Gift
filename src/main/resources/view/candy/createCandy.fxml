@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.candy.CreateCandyController">
+    <top>
+        <fx:include source="../header.fxml" />
+    </top>
+   <center>
+       <HBox alignment="CENTER" spacing="80.0">
+           <VBox alignment="CENTER">
+               <children>
+                   <Label text="Name">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                   <TextField fx:id="nameField" alignment="CENTER" maxWidth="110.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font></TextField>
+                   <Label layoutX="10.0" layoutY="10.0" text="Trademark">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                       </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                   <TextField fx:id="trademarkField" alignment="CENTER" layoutX="10.0" layoutY="28.0" maxWidth="150.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font></TextField>
+                   <Label layoutX="10.0" layoutY="96.0" text="Type">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                       </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                   <ChoiceBox fx:id="typeBox" prefWidth="120.0" />
+                   <Label layoutX="10.0" layoutY="96.0" text="Weight">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                       </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                   <TextField fx:id="weightField" alignment="CENTER" maxWidth="100.0" text="1">
+                  <font>
+                     <Font size="14.0" />
+                  </font></TextField>
+                   <Label layoutX="10.0" layoutY="196.0" text="Calories">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                       </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                   <TextField fx:id="caloriesField" alignment="CENTER" maxWidth="80.0" text="0">
+                  <font>
+                     <Font size="14.0" />
+                  </font></TextField>
+               </children>
+           </VBox>
+
+           <Separator maxHeight="600.0" orientation="VERTICAL" />
+
+           <VBox alignment="CENTER">
+               <children>
+                   <Label layoutX="10.0" layoutY="195.0" text="Sugar">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                       </VBox.margin>
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <TextField fx:id="sugarField" alignment="CENTER" maxWidth="100.0" text="0">
+                      <font>
+                         <Font size="14.0" />
+                      </font>
+                   </TextField>
+                   <Slider fx:id="sugarSlider" blockIncrement="1.0" layoutX="10.0" layoutY="213.0" majorTickUnit="10.0" minorTickCount="5" prefWidth="300.0" showTickLabels="true" showTickMarks="true">
+                       <VBox.margin>
+                           <Insets top="10.0" />
+                       </VBox.margin>
+                   </Slider>
+
+                   <Label layoutX="10.0" layoutY="259.0" text="Fats">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="10.0" right="10.0" top="15.0" />
+                       </VBox.margin>
+                       <font>
+                          <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <TextField fx:id="fatsField" alignment="CENTER" maxWidth="100.0" text="0">
+                       <font>
+                          <Font size="14.0" />
+                       </font>
+                   </TextField>
+                   <Slider fx:id="fatsSlider" blockIncrement="1.0" layoutX="10.0" layoutY="276.0" majorTickUnit="10.0" minorTickCount="5" prefWidth="300.0" showTickLabels="true" showTickMarks="true">
+                      <VBox.margin>
+                         <Insets top="10.0" />
+                      </VBox.margin>
+                   </Slider>
+
+                   <Label layoutX="10.0" layoutY="259.0" text="Proteins">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="10.0" right="10.0" top="15.0" />
+                       </VBox.margin>
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <TextField fx:id="proteinsField" alignment="CENTER" maxWidth="100.0" text="0">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </TextField>
+                   <Slider fx:id="proteinsSlider" blockIncrement="1.0" layoutX="10.0" layoutY="308.0" majorTickUnit="10.0" minorTickCount="5" prefWidth="300.0" showTickLabels="true" showTickMarks="true">
+                       <VBox.margin>
+                           <Insets top="10.0" />
+                       </VBox.margin>
+                   </Slider>
+
+                   <Label layoutX="10.0" layoutY="291.0" text="Carbohydrates">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="10.0" right="10.0" top="15.0" />
+                       </VBox.margin>
+                       <font>
+                          <Font size="14.0" />
+                       </font>
+                   </Label>
+                    <TextField fx:id="carbohydratesField" alignment="CENTER" maxWidth="100.0" text="0">
+                       <font>
+                          <Font size="14.0" />
+                       </font>
+                    </TextField>
+                   <Slider fx:id="carbohydratesSlider" blockIncrement="1.0" layoutX="10.0" layoutY="308.0" majorTickUnit="10.0" minorTickCount="5" prefWidth="300.0" showTickLabels="true" showTickMarks="true">
+                      <VBox.margin>
+                         <Insets top="10.0" />
+                      </VBox.margin>
+                   </Slider>
+
+                   <Button mnemonicParsing="false" onAction="#createCandy" text="Create!">
+                      <VBox.margin>
+                         <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+                      </VBox.margin>
+                      <font>
+                         <Font size="16.0" />
+                      </font>
+                   </Button>
+
+                   <Label fx:id="notificationLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                      <VBox.margin>
+                         <Insets bottom="10.0" top="5.0" />
+                      </VBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                   </Label>
+                   <Button mnemonicParsing="false" onAction="#clearDataFields" text="Clear all fields">
+                      <VBox.margin>
+                         <Insets />
+                      </VBox.margin>
+                   </Button>
+               </children>
+           </VBox>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+       </HBox>
+   </center>
+</BorderPane>
