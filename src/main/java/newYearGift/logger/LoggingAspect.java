@@ -49,7 +49,7 @@ public class LoggingAspect {
         } else if (error instanceof ConstraintViolationException) {
             logger.warn("! ConstraintViolationException was thrown in the method: {}, message: {}", joinPoint.getSignature().toShortString(), error.getMessage());
         } else {
-            logger.error("!!! Unpredictable Exception was thrown in the method: {}, message: {}", joinPoint.getSignature().toShortString(), error.getMessage(), error);
+            logger.error("!!! Unpredicted Exception was thrown in the method: {}, message: {}", joinPoint.getSignature().toShortString(), error.getMessage(), error);
         }
     }
 }

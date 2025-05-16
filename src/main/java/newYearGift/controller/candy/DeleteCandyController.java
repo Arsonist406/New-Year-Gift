@@ -78,7 +78,7 @@ public class DeleteCandyController {
             setCandyDataLabels(null);
             setDeleteButtonAndDeleteLabelDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findNotificationLabel);
         }
     }
 
@@ -125,7 +125,7 @@ public class DeleteCandyController {
             setCandyDataLabels(null);
             setDeleteButtonAndDeleteLabelDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(deleteNotificationLabel);
+            exceptionHandler.handleUnpredictedException(deleteNotificationLabel);
         }
     }
 }

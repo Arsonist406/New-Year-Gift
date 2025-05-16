@@ -34,10 +34,10 @@ public class ExceptionHandler {
         notificationLabel.setText(fieldName + " " + errorMessage);
     }
 
-    public void handleUnpredictableException(
+    public void handleUnpredictedException(
             Label notificationLabel
     ) {
         notificationLabel.setStyle("-fx-text-fill: red;");
-        notificationLabel.setText("!Unpredictable error, see the logs!");
+        notificationLabel.setText("!Unpredicted error, see the logs!");
     }
 }

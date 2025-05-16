@@ -156,7 +156,7 @@ public class CreateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateAndDeleteCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateAndDeleteCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateAndDeleteCandyNotificationLabel);
         }
     }
 
@@ -190,7 +190,7 @@ public class CreateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateAndDeleteCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateAndDeleteCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateAndDeleteCandyNotificationLabel);
         }
 
         if (candyIdWeightMap.isEmpty()) {
@@ -224,7 +224,7 @@ public class CreateGiftController {
             setCandyDataLabels(null);
             setAddCandyPartsDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findCandyNotificationLabel);
         }
     }
 
@@ -293,7 +293,7 @@ public class CreateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, addCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(addCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(addCandyNotificationLabel);
         }
     }
 
@@ -331,7 +331,7 @@ public class CreateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, createGiftNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(createGiftNotificationLabel);
+            exceptionHandler.handleUnpredictedException(createGiftNotificationLabel);
         }
     }
 

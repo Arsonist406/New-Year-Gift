@@ -208,7 +208,7 @@ public class SearchGiftsController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, findNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findNotificationLabel);
         }
     }
 
@@ -224,7 +224,7 @@ public class SearchGiftsController {
                 findNotificationLabel.setText("No gifts was found");
             }
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findNotificationLabel);
         }
     }
 }

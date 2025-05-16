@@ -129,7 +129,7 @@ public class UpdateCandyController {
             exceptionHandler.handleBusinessException(e, findNotificationLabel);
             setViewElementsDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findNotificationLabel);
         }
     }
 
@@ -181,7 +181,7 @@ public class UpdateCandyController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateNotificationLabel);
         }
     }
 

@@ -94,7 +94,7 @@ public class DeleteGiftController {
             setGiftDataFields(null);
             setDeleteButtonAndDeleteLabelDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findNotificationLabel);
         }
     }
 
@@ -147,7 +147,7 @@ public class DeleteGiftController {
             setGiftDataFields(null);
             setDeleteButtonAndDeleteLabelDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(deleteNotificationLabel);
+            exceptionHandler.handleUnpredictedException(deleteNotificationLabel);
         }
     }
 }

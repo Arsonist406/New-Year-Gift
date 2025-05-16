@@ -168,7 +168,7 @@ public class UpdateGiftController {
             candyIdWeightMap.clear();
             setDeleteCandyAndChangeWeightPartsDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findGiftNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findGiftNotificationLabel);
         }
     }
 
@@ -258,7 +258,7 @@ public class UpdateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateAndDeleteCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateAndDeleteCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateAndDeleteCandyNotificationLabel);
         }
     }
 
@@ -292,7 +292,7 @@ public class UpdateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateAndDeleteCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateAndDeleteCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateAndDeleteCandyNotificationLabel);
         }
 
         if (candyIdWeightMap.isEmpty()) {
@@ -316,7 +316,7 @@ public class UpdateGiftController {
             setCandyDataLabels(null);
             setAddCandyPartsDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(findCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(findCandyNotificationLabel);
         }
     }
 
@@ -385,7 +385,7 @@ public class UpdateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, addCandyNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(addCandyNotificationLabel);
+            exceptionHandler.handleUnpredictedException(addCandyNotificationLabel);
         }
     }
 
@@ -420,7 +420,7 @@ public class UpdateGiftController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, updateGiftNotificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(updateGiftNotificationLabel);
+            exceptionHandler.handleUnpredictedException(updateGiftNotificationLabel);
         }
     }
 

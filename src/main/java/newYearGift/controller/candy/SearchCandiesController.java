@@ -138,7 +138,7 @@ public class SearchCandiesController {
         } catch (BusinessException e) {
             exceptionHandler.handleBusinessException(e, notificationLabel);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictableException(notificationLabel);
+            exceptionHandler.handleUnpredictedException(notificationLabel);
         }
     }
 
