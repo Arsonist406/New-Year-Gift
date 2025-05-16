@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+
 <BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.candy.SearchCandiesController">
    <top>
        <fx:include source="../header.fxml" />
@@ -15,12 +16,12 @@
            <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
            <TableColumn fx:id="trademarkColumn" prefWidth="100.0" text="Trademark" />
            <TableColumn fx:id="typeColumn" prefWidth="90.0" text="Type" />
-           <TableColumn fx:id="weightColumn" prefWidth="75.0" text="Weight" />
-           <TableColumn fx:id="caloriesColumn" prefWidth="75.0" text="Calories" />
-           <TableColumn fx:id="fatsColumn" prefWidth="55.0" text="Fats" />
-           <TableColumn fx:id="proteinsColumn" prefWidth="75.0" text="Proteins" />
-           <TableColumn fx:id="carbohydratesColumn" prefWidth="100.0" text="Carbohydrates" />
-           <TableColumn fx:id="sugarColumn" prefWidth="75.0" text="Sugar" />
+           <TableColumn fx:id="weightColumn" prefWidth="100.0" text="Weight in grams" />
+           <TableColumn fx:id="caloriesColumn" prefWidth="75.0" text="Calories*" />
+           <TableColumn fx:id="fatsColumn" prefWidth="55.0" text="Fats*" />
+           <TableColumn fx:id="proteinsColumn" prefWidth="75.0" text="Proteins*" />
+           <TableColumn fx:id="carbohydratesColumn" prefWidth="100.0" text="Carbohydrates*" />
+           <TableColumn fx:id="sugarColumn" prefWidth="75.0" text="Sugar*" />
         </columns>
       </TableView>
    </center>
@@ -264,6 +265,13 @@
                         <Insets top="15.0" />
                      </VBox.margin>
                   </Button>
+                  <Label text="*per 100 grams">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
                </children>
             </VBox>
          </children>

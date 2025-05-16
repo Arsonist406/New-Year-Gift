@@ -4,11 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<BorderPane
-        stylesheets="/style/style.css"
-        xmlns="http://javafx.com/javafx/17.0.12"
-        xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="newYearGift.controller.gift.UpdateGiftController">
+
+<BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.gift.UpdateGiftController">
     <top>
         <fx:include source="../header.fxml" />
     </top>
@@ -199,7 +196,7 @@
                    </Label>
                <HBox maxHeight="358.0" prefHeight="330.0" prefWidth="250.0" spacing="5.0">
                   <children>
-                         <VBox alignment="CENTER_RIGHT" prefHeight="330.0" prefWidth="160.0" spacing="15.0">
+                         <VBox alignment="CENTER_RIGHT" prefHeight="330.0" prefWidth="205.0" spacing="15.0">
                              <children>
                                  <Label text="Name">
                                      <font>
@@ -216,35 +213,35 @@
                                          <Font size="14.0" />
                                      </font>
                                  </Label>
-                                 <Label text="Weight">
+                                 <Label text="Weight in grams">
                                      <font>
                                          <Font size="14.0" />
                                      </font>
                                  </Label>
-                                 <Label text="Calories">
+                                 <Label text="Calories*">
                                      <font>
                                          <Font size="14.0" />
                                      </font>
                                  </Label>
-                                 <Label text="Sugar">
-                                     <font>
-                                         <Font size="14.0" />
-                                     </font>
-                                 </Label>
-
-                                 <Label text="Fats">
+                                 <Label text="Sugar*">
                                      <font>
                                          <Font size="14.0" />
                                      </font>
                                  </Label>
 
-                                 <Label text="Proteins">
+                                 <Label text="Fats*">
                                      <font>
                                          <Font size="14.0" />
                                      </font>
                                  </Label>
 
-                                 <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="139.0" text="Carbohydrates">
+                                 <Label text="Proteins*">
+                                     <font>
+                                         <Font size="14.0" />
+                                     </font>
+                                 </Label>
+
+                                 <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="139.0" text="Carbohydrates*">
                                      <font>
                                          <Font size="14.0" />
                                      </font>
@@ -311,9 +308,16 @@
                   <VBox.margin>
                      <Insets bottom="5.0" top="5.0" />
                   </VBox.margin></HBox>
+                   <Label text="*per 100 grams">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </VBox.margin>
+                       <font>
+                           <Font size="10.0" />
+                       </font></Label>
                  <Label fx:id="weightOfCandyInGiftMessageLabel" alignment="CENTER" contentDisplay="CENTER" disable="true" maxWidth="300.0" text="Weight of candy in gift in grams" textAlignment="CENTER" wrapText="true">
                      <VBox.margin>
-                         <Insets bottom="10.0" top="15.0" />
+                         <Insets bottom="10.0" top="5.0" />
                      </VBox.margin>
                      <font>
                          <Font size="14.0" />
