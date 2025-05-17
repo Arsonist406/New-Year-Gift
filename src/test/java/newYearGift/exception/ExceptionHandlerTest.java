@@ -69,7 +69,7 @@ class ExceptionHandlerTest {
 
     @Test
     void handleUnpredictedException_setNotificationLabel() {
-        String expected = "!Unpredictable error, see the logs!";
+        String expected = "!Unpredicted error, see the logs!";
         Label label = new Label();
 
         exceptionHandler.handleUnpredictedException(label);

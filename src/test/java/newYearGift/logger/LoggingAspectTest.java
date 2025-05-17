@@ -108,6 +108,6 @@ class LoggingAspectTest {
 
 
         verify(logger)
-                .error("!!! Unpredictable Exception was thrown in the method: {}, message: {}", signature, error.getMessage(), error);
+                .error("!!! Unpredicted Exception was thrown in the method: {}, message: {}", signature, error.getMessage(), error);
     }
 }
