@@ -115,7 +115,7 @@ class CreateCandyControllerTest {
         robot.clickOn("#createButton");
 
 
-        assertTrue(controller.getNotificationLabel().getText().contains("Yours new candy Id is 1"));
+        assertTrue(controller.getNotificationLabel().getText().contains("New candy has been created"));
     }
 
     @Test
