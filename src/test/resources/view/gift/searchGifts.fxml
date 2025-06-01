@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+
 <BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.gift.SearchGiftsController">
 <!--    <top>-->
 <!--        <fx:include source="../header.fxml" />-->
@@ -13,21 +14,14 @@
          <children>
             <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="60.0" prefHeight="24.0" prefWidth="856.0">
                <children>
-                  <TextField fx:id="idOrNameField" maxHeight="1.7976931348623157E308" prefHeight="30.0" promptText="id/name">
+                  <TextField fx:id="nameField" maxHeight="1.7976931348623157E308" prefHeight="30.0" promptText="name">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin></TextField>
-                  <Button fx:id="findGiftById" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" mnemonicParsing="false" onAction="#findGiftById" text="Find by id">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="findGiftByName" mnemonicParsing="false" onAction="#findGiftByName" text="Find by name">
+                  <Button fx:id="findGiftByName" mnemonicParsing="false" onAction="#findGiftByName" text="Find!">
                      <font>
                         <Font size="14.0" />
                      </font>

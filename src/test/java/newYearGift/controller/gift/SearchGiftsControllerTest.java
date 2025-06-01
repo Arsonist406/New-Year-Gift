@@ -98,46 +98,6 @@ class SearchGiftsControllerTest {
     }
 
     @Test
-    void findGiftById_whenFound_showsGift(FxRobot robot) {
-        Long id = 1L;
-        Map<Candy, Integer> candyWeightMap = new HashMap<>();
-        candyWeightMap.put(mock(Candy.class), 100);
-        Gift gift = new Gift(
-                id,
-                "name",
-                "description",
-                "author",
-                Instant.parse("2024-01-01T12:00:00Z"),
-                candyWeightMap
-        );
-        when(giftService.getGiftById(id))
-                .thenReturn(gift);
-
-
-        robot.interact(() -> controller.getIdOrNameField().setText(id.toString()));
-        robot.clickOn("#findGiftById");
-
-
-        verify(giftService)
-                .getGiftById(any());
-        Assertions.assertThat(controller.getFindNotificationLabel())
-                .hasText("");
-    }
-
-    @Test
-    void findGiftById_whenBusinessExceptionOccurs_showMessage(FxRobot robot) {
-        doNothing().when(exceptionHandler)
-                        .handleBusinessException(any(), any());
-
-        robot.interact(() -> controller.getIdOrNameField().setText("error"));
-        robot.clickOn("#findGiftById");
-
-
-        Assertions.assertThat(controller.getFindNotificationLabel())
-                .hasText("");
-    }
-
-    @Test
     void findGiftByName_whenFound_showsGifts(FxRobot robot) {
         String name = "name";
         Map<Candy, Integer> candyWeightMap = new HashMap<>();
@@ -154,7 +114,7 @@ class SearchGiftsControllerTest {
                 .thenReturn(List.of(gift));
 
 
-        robot.interact(() -> controller.getIdOrNameField().setText(name));
+        robot.interact(() -> controller.getNameField().setText(name));
         robot.clickOn("#findGiftByName");
 
 
@@ -171,7 +131,7 @@ class SearchGiftsControllerTest {
                 .thenReturn(new ArrayList<>());
 
 
-        robot.interact(() -> controller.getIdOrNameField().setText(name));
+        robot.interact(() -> controller.getNameField().setText(name));
         robot.clickOn("#findGiftByName");
 
 
