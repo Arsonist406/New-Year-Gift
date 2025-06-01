@@ -36,9 +36,7 @@ import java.util.List;
 public class SearchGiftsController {
 
     @FXML
-    private TextField idOrNameField;
-    @FXML
-    private Button findGiftById;
+    private TextField nameField;
     @FXML
     private Button findGiftByName;
     @FXML
@@ -198,24 +196,9 @@ public class SearchGiftsController {
     }
 
     @FXML
-    private void findGiftById() {
-        try {
-            Long id = Parser.parseLong(idOrNameField, "Id");
-            Gift foundGiftById = giftService.getGiftById(id);
-            populateGiftsGrid(List.of(foundGiftById));
-
-            findNotificationLabel.setText("");
-        } catch (BusinessException e) {
-            exceptionHandler.handleBusinessException(e, findNotificationLabel);
-        } catch (Exception e) {
-            exceptionHandler.handleUnpredictedException(findNotificationLabel);
-        }
-    }
-
-    @FXML
     private void findGiftByName() {
         try {
-            String name = idOrNameField.getText().trim();
+            String name = nameField.getText().trim();
             List<Gift> foundGiftsByName = giftService.getGiftsByName(name);
             populateGiftsGrid(foundGiftsByName);
 
