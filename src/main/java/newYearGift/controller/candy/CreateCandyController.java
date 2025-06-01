@@ -109,10 +109,10 @@ public class CreateCandyController {
     @FXML
     public void createCandy() {
         try {
-            Candy newCandy = candyService.createCandy(buildCandyDTO());
+            candyService.createCandy(buildCandyDTO());
 
             notificationLabel.setStyle("-fx-text-fill: green;");
-            notificationLabel.setText("Yours new candy Id is " + newCandy.getId());
+            notificationLabel.setText("New candy has been created");
         } catch (ConstraintViolationException e) {
             exceptionHandler.handleConstraintViolationException(e, notificationLabel);
         } catch (BusinessException e) {
