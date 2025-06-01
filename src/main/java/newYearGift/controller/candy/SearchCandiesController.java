@@ -23,8 +23,6 @@ import java.util.List;
 public class SearchCandiesController {
 
     @FXML
-    private TextField idField;
-    @FXML
     private TextField nameField;
     @FXML
     private TextField trademarkField;
@@ -127,11 +125,7 @@ public class SearchCandiesController {
     private void searchCandies() {
         List<Candy> candies;
         try {
-            if (!idField.getText().isEmpty()) {
-                candies = searchById();
-            } else {
-                candies = searchByCriteria();
-            }
+            candies = searchByCriteria();
 
             notificationLabel.setText("");
             updateCandyTable(candies);
@@ -140,11 +134,6 @@ public class SearchCandiesController {
         } catch (Exception e) {
             exceptionHandler.handleUnpredictedException(notificationLabel);
         }
-    }
-
-    private List<Candy> searchById() {
-        Long id = Parser.parseLong(idField, "Id");
-        return List.of(candyService.getCandyById(id));
     }
 
     private List<Candy> searchByCriteria() {
@@ -193,7 +182,6 @@ public class SearchCandiesController {
 
     @FXML
     private void clearCriteriaFields() {
-        idField.clear();
         nameField.clear();
         trademarkField.clear();
         typeBox.setValue("Not specified");
