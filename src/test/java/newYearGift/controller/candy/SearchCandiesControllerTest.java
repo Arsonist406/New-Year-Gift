@@ -116,33 +116,6 @@ class SearchCandiesControllerTest {
     }
 
     @Test
-    void searchCandies_whenSearchingByIdAndSuccessfully_showsCandyData(FxRobot robot) {
-        Long id = 1L;
-        Candy candy = spy(new Candy(
-                1L,
-                "name",
-                "trademark",
-                CandyType.Chocolate,
-                100,
-                200,
-                BigDecimal.valueOf(10.0),
-                BigDecimal.valueOf(5.0),
-                BigDecimal.valueOf(3.0),
-                BigDecimal.valueOf(15.0)));
-        when(candyService.getCandyById(id))
-                .thenReturn(candy);
-
-
-        robot.interact(() -> controller.getIdField().setText("1"));
-
-        robot.clickOn("#searchButton");
-
-
-        Assertions.assertThat(controller.getNotificationLabel()).hasText("");
-        assertTrue(controller.getCandyTable().getItems().contains(candy));
-    }
-
-    @Test
     void searchCandies_whenSearchingByNotSpecifiedAndSuccessfully_showsCandiesData(FxRobot robot) {
         Candy candy1 = spy(new Candy(
                 1L,
@@ -392,7 +365,6 @@ class SearchCandiesControllerTest {
         robot.clickOn("#searchButton");
 
         robot.interact(() -> {
-            controller.getIdField().setText("123");
             controller.getNameField().setText("name");
             controller.getTrademarkField().setText("trademark");
             controller.getTypeBox().setValue("Toffee");
@@ -405,7 +377,6 @@ class SearchCandiesControllerTest {
         robot.clickOn("#clearCriteriaFieldsButton");
 
 
-        Assertions.assertThat(controller.getIdField()).hasText("");
         Assertions.assertThat(controller.getNameField()).hasText("");
         Assertions.assertThat(controller.getTrademarkField()).hasText("");
         assertTrue(controller.getTypeBox().getValue().contains("Not specified"));

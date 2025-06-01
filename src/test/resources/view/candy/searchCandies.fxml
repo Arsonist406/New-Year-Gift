@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+
 <BorderPane stylesheets="/style/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newYearGift.controller.candy.SearchCandiesController">
 <!--   <top>-->
 <!--       <fx:include source="../header.fxml" />-->
@@ -27,34 +28,6 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="140.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefWidth="200.0">
-               <children>
-                  <VBox prefHeight="64.0" prefWidth="159.0">
-                     <children>
-                        <Label text="ID">
-                           <padding>
-                              <Insets top="5.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-            
-                        <TextField fx:id="idField" maxWidth="60.0">
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
 
             <Label text="Name">
                <padding>
