@@ -16,44 +16,57 @@
                <HBox prefHeight="290.0" prefWidth="407.0">
                   <children>
                      <VBox alignment="CENTER" prefHeight="286.0" prefWidth="203.0">
-                          <Label alignment="CENTER" maxWidth="90.0" prefHeight="20.0" prefWidth="48.0" text="Enter gift id">
-                              <VBox.margin>
-                                  <Insets />
-                              </VBox.margin>
+                        <Label text="Available gifts">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="giftTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="giftIdColumn" prefWidth="30.0" text="Id" />
+                            <TableColumn fx:id="giftNameColumn" prefWidth="120.0" text="Name" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="154.0" spacing="5.0">
+                           <children>
+                                <TextField fx:id="idField" alignment="CENTER" maxWidth="40.0" promptText="id">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                </TextField>
+                                <Button fx:id="selectGiftButton" mnemonicParsing="false" onAction="#selectGift" text="Select!">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                          <Label fx:id="selectGiftNotificationLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" textAlignment="CENTER" textFill="RED" wrapText="true">
                               <font>
                                   <Font size="14.0" />
                               </font>
-                          </Label>
-                          <TextField fx:id="idField" alignment="CENTER" maxWidth="70.0">
-                              <VBox.margin>
-                                  <Insets top="10.0" />
-                              </VBox.margin>
-                              <font>
-                                  <Font size="14.0" />
-                              </font>
-                          </TextField>
-                          <Button maxWidth="50.0" mnemonicParsing="false" onAction="#findGift" text="Find!">
-                              <VBox.margin>
-                                  <Insets top="10.0" />
-                              </VBox.margin>
-                              <font>
-                                  <Font size="14.0" />
-                              </font>
-                          </Button>
-                          <Label fx:id="findGiftNotificationLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" textAlignment="CENTER" textFill="RED" wrapText="true">
-                              <font>
-                                  <Font size="14.0" />
-                              </font>
-                              <VBox.margin>
-                                  <Insets top="10.0" />
-                              </VBox.margin>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
                           </Label>
                       </VBox>
                      <Separator orientation="VERTICAL" prefHeight="200.0">
                         <padding>
-                           <Insets right="15.0" />
+                           <Insets left="5.0" right="5.0" />
                         </padding></Separator>
-                     <VBox alignment="CENTER" prefHeight="227.0" prefWidth="306.0">
+                     <VBox alignment="CENTER" prefHeight="227.0" prefWidth="290.0">
                         <children>
                                <Label text="Name">
                                    <VBox.margin>
@@ -76,7 +89,7 @@
                                  <Font size="14.0" />
                               </font>
                            </Label>
-                           <TextArea fx:id="giftDescriptionArea" disable="true" maxWidth="309.0" prefHeight="130.0" prefWidth="306.0" wrapText="true">
+                           <TextArea fx:id="giftDescriptionArea" disable="true" maxWidth="290.0" prefHeight="130.0" prefWidth="290.0" wrapText="true">
                               <font>
                                  <Font size="14.0" />
                               </font>

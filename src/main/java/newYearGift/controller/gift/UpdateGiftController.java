@@ -31,11 +31,17 @@ import java.util.stream.Collectors;
 public class UpdateGiftController {
 
     @FXML
+    private TableView<Gift> giftTable;
+    @FXML
+    private TableColumn<Gift, Long> giftIdColumn;
+    @FXML
+    private TableColumn<Gift, String> giftNameColumn;
+    @FXML
     private TextField idField;
     @FXML
-    private Button findGiftButton;
+    private Button selectGiftButton;
     @FXML
-    private Label findGiftNotificationLabel;
+    private Label selectGiftNotificationLabel;
 
     @FXML
     private TextField giftNameField;
@@ -136,6 +142,12 @@ public class UpdateGiftController {
 
     @FXML
     private void initialize() {
+        giftIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        giftNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        List<Gift> gifts = giftService.getGiftsByName("");
+        giftTable.setItems(FXCollections.observableList(gifts));
+
         candyIdWeightMap = new HashMap<>();
 
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -146,12 +158,12 @@ public class UpdateGiftController {
     }
 
     @FXML
-    private void findGift() {
+    private void selectGift() {
         try {
             currentUpdatingGiftId = Parser.parseLong(idField, "Id");
             Gift gift = giftService.getGiftById(currentUpdatingGiftId);
 
-            findGiftNotificationLabel.setText("");
+            selectGiftNotificationLabel.setText("");
             setViewElementsDisability(false);
             setGiftDataFields(gift);
             setCandyIdWeightMap(gift);
@@ -162,13 +174,13 @@ public class UpdateGiftController {
                 setDeleteCandyAndChangeWeightPartsDisability(false);
             }
         } catch (BusinessException e) {
-            exceptionHandler.handleBusinessException(e, findGiftNotificationLabel);
+            exceptionHandler.handleBusinessException(e, selectGiftNotificationLabel);
             setViewElementsDisability(true);
             clearDataFields();
             candyIdWeightMap.clear();
             setDeleteCandyAndChangeWeightPartsDisability(true);
         } catch (Exception e) {
-            exceptionHandler.handleUnpredictedException(findGiftNotificationLabel);
+            exceptionHandler.handleUnpredictedException(selectGiftNotificationLabel);
         }
     }
 
