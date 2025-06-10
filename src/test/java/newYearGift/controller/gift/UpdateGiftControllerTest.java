@@ -74,7 +74,7 @@ class UpdateGiftControllerTest {
     }
 
     @Test
-    void findGift_whenFound_showsGiftDataAndEnableViewElements(FxRobot robot) {
+    void selectGift_whenFound_showsGiftDataAndEnableViewElements(FxRobot robot) {
         Long id = 1L;
         Map<Candy, Integer> candyWeightMap = new HashMap<>();
         candyWeightMap.put(mock(Candy.class), 100);
@@ -91,7 +91,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
 
         Assertions.assertThat(controller.getGiftNameField())
                 .isEnabled();
@@ -137,7 +137,7 @@ class UpdateGiftControllerTest {
     }
 
     @Test
-    void findGift_whenBusinessExceptionOccurs_showMessageAndClearsDataFieldsAndDisableViewElementsAndElse$_$(FxRobot robot) {
+    void selectGift_whenBusinessExceptionOccurs_showMessageAndClearsDataFieldsAndDisableViewElementsAndElse$_$(FxRobot robot) {
         Long normId = 1L;
         Long errorId = 2L;
         Map<Candy, Integer> candyWeightMap = new HashMap<>();
@@ -157,9 +157,9 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(normId.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getIdField().setText(errorId.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
 
 
         Assertions.assertThat(controller.getGiftNameField())
@@ -236,7 +236,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -288,7 +288,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -333,7 +333,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -384,7 +384,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -428,7 +428,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
 
@@ -486,7 +486,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(workingId.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(workingId.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(exceptionTrowingId.toString()));
@@ -538,7 +538,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -582,7 +582,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -632,7 +632,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("-5"));
@@ -676,7 +676,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -719,7 +719,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
@@ -762,7 +762,7 @@ class UpdateGiftControllerTest {
 
 
         robot.interact(() -> controller.getIdField().setText(id.toString()));
-        robot.clickOn("#findGiftButton");
+        robot.clickOn("#selectGiftButton");
         robot.interact(() -> controller.getCandyIdToFoundField().setText(id.toString()));
         robot.clickOn("#findCandyButton");
         robot.interact(() -> controller.getWeightOfCandyInGiftField().setText("100"));
